@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 20px;
+}
+body{
+    background-color: hsl(30, 38%, 92%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    background-color: hsl(0, 0%, 100%);
+    width: 35rem;
+    padding: 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.5);
+}
+.card{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
+.desktopimg{
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+.mobileimg {
+    display: none; /* Mobil görünümde masaüstü resmini gizler */
+}
+.mobileDescription{
+    display: none;
+}
+.header{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+    margin: 1.5rem;
+    letter-spacing: 0.3rem;
+}
+h1{
+    font-family: "Fraunces", serif;
+    margin: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+.desktopDescription{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    margin: 1.5rem;
+    line-height: 1.7;
+    text-align: left;
+}
+.priceContainer{
+    display: flex;
+    align-items: center;
+    margin: 1.5rem;
+}
+.price{
+    font-family: "Fraunces", serif;
+    color: hsl(158, 36%, 37%);
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-right: 1rem;
+}
+.oldPrice{
+    font-family: "Montserrat", sans-serif;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.cardButton {
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1.5rem;
+    padding: 15px 40px;
+    width: calc(100% - 3rem);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardButton:hover {
+    background-color: hsl(212, 21%, 14%);
+}
+.cartIcon {
+    width: 1rem;
+    margin-right: 0.5rem;
+}
+@media screen and (max-width: 768px){
+    .desktopimg{
+        display: none;
+    }
+    .mobileimg{
+        display: block;
+        width:100%;
+        border-bottom-left-radius:0;
+        border-top-right-radius: 0.5rem;
+        border-top-left-radius: 0.5rem;
+    }
+    .desktopDescription{
+        display: none;
+    }
+    .mobileDescription{
+        display: block;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        color: hsl(228, 12%, 48%);
+        margin: 1.5rem;
+        line-height: 1.7;
+        text-align: left;
+    }
+    .card{
+        flex-direction: column;
+    }
+    .container{
+        margin: 1rem;
+    }
+    body{
+        margin-top:5rem ;
+        margin-bottom: 5rem;
+    }
+}
+    
