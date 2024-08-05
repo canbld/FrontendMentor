@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@100..900&family=Montserrat:wght@100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+html{
+    font-size: 20px;
+}
+body{
+    background-color: hsl(210, 46%, 95%);
+    height: 100vh;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.cardContainer{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+    gap: 1rem;
+    padding: 10rem;
+}
+.card1, .card2, .card3, .card4, .card5{
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 0.6rem;
+    position: relative;
+}
+.card1{
+    grid-column: span 7;
+    grid-row: span 4;
+    background-color: hsl(263, 55%, 52%) ;
+}
+.card2{
+    grid-column: span 3;
+    grid-row: span 4;
+    background-color: hsl(217, 19%, 35%);
+}
+.card3{
+    grid-column: span 3;
+    grid-row: span 4;
+    background-color: hsl(0, 0%, 100%);
+}
+.card4{
+    grid-column: span 7;
+    grid-row: span 4;
+    background-color: hsl(219, 29%, 14%);
+}
+.card5{
+    grid-column: 11 /  span 6;
+    grid-row:  1 / span 8;
+    background-color: hsl(0, 0%, 100%);
+}
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+.svg{
+    position: absolute;
+    top: 0;
+    right: 4.2rem;
+    z-index: 1;
+}
+.content {
+    position: relative;
+    z-index: 2;
+}
+.name {
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+}
+.img{
+    border-radius: 50%;
+    margin-right: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.title {
+    color: hsl(0, 2%, 65%);
+    font-size: 0.5rem;
+    opacity: 0.7;
+}
+.cardHeader {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color:hsl(0, 0%, 100%) ;
+    font-size: 1.12rem;
+}
+.cardHeader2{
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color:hsl(219, 29%, 14%) ;
+    font-size: 1.12rem;
+}
+#card2Header{
+    font-size: 1rem;
+}
+.cardDescription{
+    color: hsl(0, 0%, 85%);
+    font-weight: 500;
+    font-size: 0.7rem;
+    line-height: 0.8rem;
+    opacity: 0.6;
+
+}
+.cardDescription2{
+    color: hsl(217, 19%, 35%);
+    font-weight: 500;
+    font-size: 0.7rem;
+    line-height: 0.8rem;
+    opacity: 0.6;
+}
+#imgDaniel, #imgPatrick{
+    border: 2px solid hsl(263, 69%, 74%);
+}
+@media (max-width: 1100px) {
+
+    .cardContainer {
+        display: flex;
+        flex-direction: column;
+        padding: 3.5rem;
+    }
+
+    .card1, .card2, .card3, .card4, .card5 {
+        width: 100%;
+        grid-column: auto;
+        grid-row: auto;
+        margin-bottom: 1rem;
+    }
+
+    .svg {
+        right: 1rem;
+    }
+}
