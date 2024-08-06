@@ -20,6 +20,7 @@ body{
     width: 100%;
 }
 header{
+    display: flex;
     text-align: center;
     flex-direction: column;
     margin-bottom: 0.2rem;
@@ -43,12 +44,17 @@ header .headerDescription{
 }
 .cardContainer{
     display: grid;
-    grid-template-columns: repeat(12,1fr);
+    grid-template-columns: repeat(3,20rem);
     gap: 1.5rem;
     padding: 0rem 5rem 5rem 5rem;
-    margin-right: 2rem;
     width: 100%;
     justify-content: center;
+    place-items: center;
+}
+.card12Container{
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
     align-items: center;
 }
 .card1, .card2, .card3, .card4{
@@ -59,30 +65,22 @@ header .headerDescription{
     box-shadow: 0.1rem 0.4rem 0.5rem rgba(0, 0, 0, 0.2);
     height: 15rem;
     width: 20rem;
-    -webkit-border-radius: 0.3rem;
-    -moz-border-radius: 0.3rem;
-    -ms-border-radius: 0.3rem;
-    -o-border-radius: 0.3rem;
 }
 .card1{
     border-top: 0.25rem solid hsl(180, 62%, 55%);
-    grid-column: 3 / span 4;
-    grid-row: 3 / span 2;
+
 }
 .card2{
     border-top: 0.25rem solid hsl(0, 78%, 62%);
-    grid-column: 7 / span 4;
-    grid-row: 2 / span 2;
+
 }
 .card4{
     border-top: 0.25rem solid hsl(212, 86%, 64%);
-    grid-column: 11 / span 4;
-    grid-row: 3 / span 2;
+
 }
 .card3{
     border-top: 0.25rem solid hsl(34, 97%, 64%);
-    grid-column: 7 / span 4;
-    grid-row: 4 / span 2;
+
 }
 .cardHeader{
     font-weight: 600;
@@ -102,10 +100,6 @@ header .headerDescription{
 }
 @media screen and (max-width: 1100px) {
     header{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         width: 80%;
     }
     header h1{
@@ -115,12 +109,14 @@ header .headerDescription{
         margin-top: 1rem;
         width: 90%;
     }
+    .card12Container{
+        width: 100%;
+        gap: 2rem;
+    }
     .cardContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 100%;
+        grid-template-rows: 3fr;
         padding: 1rem;
-        margin-left: 2.5rem;
         gap: 2rem;
     }
     .card1, .card2, .card3, .card4 {
