@@ -22,7 +22,7 @@ body{
 header{
     text-align: center;
     flex-direction: column;
-    margin-bottom: 1rem;
+    margin-bottom: 0.2rem;
     padding: 2.5rem 1rem;
     width: 29rem;
 }
@@ -43,25 +43,46 @@ header .headerDescription{
 }
 .cardContainer{
     display: grid;
-    grid-template-columns:repeat(3,1fr);
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 2rem 1rem;
+    grid-template-columns: repeat(12,1fr);
+    gap: 1.5rem;
+    padding: 0rem 5rem 5rem 5rem;
+    margin-right: 2rem;
     width: 100%;
-    max-width: 80rem;
-    margin-right: -4rem;
+    justify-content: center;
+    align-items: center;
 }
-.card{
+.card1, .card2, .card3, .card4{
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    padding: 2rem;
-    margin: 0.4rem;
+    border-radius: 0.3rem;
     text-align: center;
-    width: 20rem;
+    padding: 1.5rem;
+    box-shadow: 0.1rem 0.4rem 0.5rem rgba(0, 0, 0, 0.2);
     height: 15rem;
-    margin-top: -2rem;
-    
+    width: 20rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+}
+.card1{
+    border-top: 0.25rem solid hsl(180, 62%, 55%);
+    grid-column: 3 / span 4;
+    grid-row: 3 / span 2;
+}
+.card2{
+    border-top: 0.25rem solid hsl(0, 78%, 62%);
+    grid-column: 7 / span 4;
+    grid-row: 2 / span 2;
+}
+.card4{
+    border-top: 0.25rem solid hsl(212, 86%, 64%);
+    grid-column: 11 / span 4;
+    grid-row: 3 / span 2;
+}
+.card3{
+    border-top: 0.25rem solid hsl(34, 97%, 64%);
+    grid-column: 7 / span 4;
+    grid-row: 4 / span 2;
 }
 .cardHeader{
     font-weight: 600;
@@ -77,36 +98,9 @@ header .headerDescription{
 }
 .icon{
     text-align: right;
-    margin-top: 2rem;
+    margin-top: 3.5rem;
 }
-#card1{
-    border-top: 0.3rem solid hsl(180, 62%, 55%);
-    grid-column:1 ;
-    grid-row: 1;
-    margin-top: 8rem;
-    position: relative;
-    left: 2.3rem;
-}
-#card2{
-    border-top: 0.3rem solid hsl(0, 78%, 62%);
-    grid-column:2 ;
-    grid-row: 1 ;
-}
-#card3{
-    border-top: 0.3rem solid hsl(212, 86%, 64%);
-    grid-column:3 ;
-    grid-row: 1;
-    margin-top: 8rem;
-    position: relative;
-    right: 2.3rem;
-}
-#card4{
-    border-top: 0.3rem solid hsl(34, 97%, 64%);
-    grid-column:2 ;
-    grid-row: 2;
-    margin-top: -8.5rem;
-}
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1100px) {
     header{
         display: flex;
         flex-direction: column;
@@ -125,18 +119,14 @@ header .headerDescription{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0.2rem;
-        position: relative;
-        right: 1.6rem;
-        top: -1rem;
+        padding: 1rem;
+        margin-left: 2.5rem;
+        gap: 2rem;
     }
-    .card {
+    .card1, .card2, .card3, .card4 {
         width: 90%;
-        margin: 1rem;
     }
-
-    #card1, #card2, #card3, #card4 {
-        margin: 1rem;
-        position: static;
+    .icon{
+        margin-top: 4rem;
     }
 }
