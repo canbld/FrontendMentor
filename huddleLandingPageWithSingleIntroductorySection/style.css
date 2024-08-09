@@ -44,7 +44,6 @@ body{
     justify-content: center;
     max-width: 80%;
     min-width: 90%;
-    margin: 1rem;
     gap: 2rem;
 
 }
@@ -53,7 +52,7 @@ body{
 }
 .head{
     font-family: "Poppins", sans-serif;
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     color: white;
     font-weight: 600;
 }
