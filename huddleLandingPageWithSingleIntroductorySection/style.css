@@ -14,21 +14,17 @@ body{
     justify-content: center;
 }
 .container{
+    max-width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0.5rem 5rem;
 }
 .content{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-}
-.socials{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    gap: 4rem;
 }
 .header{
     width: 100%;
@@ -37,20 +33,23 @@ body{
     align-items: center;
 }
 .headerSvgContainer{
-    max-width: 12rem;
+    max-width: 11rem;
     display: flex;
     align-items: center;
-
+    justify-content: center;
 }
 .introductory{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
-    gap: 1rem;
-    padding: 6rem;
-    margin-bottom: 2rem;
+    max-width: 80%;
+    min-width: 90%;
+    margin: 1rem;
+    gap: 2rem;
 
+}
+.mockup{
+    margin-top: 2rem;
 }
 .head{
     font-family: "Poppins", sans-serif;
@@ -67,7 +66,6 @@ body{
 }
 .logoSvg{
     width: 100%;
-    padding: 3rem 0;
     height: auto;
 }
 .svg {
@@ -75,24 +73,107 @@ body{
     height: 2rem;
     fill: #fff;
     margin-left: 0.7rem;
+    border-radius: 2rem;
 }
 .svg:hover {
     cursor: pointer;
-    fill: #f268d2;
-    color: #f268d2;
+    fill: #db4da9;
+    transition: all 0.5s ease-in-out;
+}
+.header-and-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.header-and-mockup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
 }
 
 .btn {
     background-color: white;
     color: hsl(257, 40%, 49%);
-    padding: 0.75rem 1.5rem;
-    border: none;
+    padding: 1rem 1.5rem;
+    border: 2px solid hsl(257, 40%, 49%);
     border-radius: 2rem;
     font-size: 1rem;
-    width: 30%;
+    width: 35%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 .btn:hover{
     background-color: hsl(300, 69%, 71%);
     cursor: pointer;
     color: white;
+    border: 2px solid white;
+    transition: all 0.5s ease-in-out;
+}
+.socials{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+@media (max-width: 900px) {
+
+    body{
+        background: url(images/bg-mobile.svg);
+        background-color: hsl(257, 40%, 49%);
+
+    }
+    .container{
+        width: 100%;
+    }
+    
+    .headerSvgContainer {
+        max-width: 9rem;
+    }
+    
+    .header-and-content {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    .header-and-mockup{
+        gap: 0.5rem;
+    }
+    
+    .mockupSvg {
+        width: 15rem;
+        height: auto;
+    }
+    
+    .head {
+        font-size: 1.2rem;
+
+    }
+    
+    .description {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+    
+    .svg {
+        width: 1.4rem; 
+        height: 1.4rem;
+        margin-left: 0;
+    }
+    .introductory{
+        text-align: center;
+    }
+    
+    .socials {
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 0.7rem;
+    }
 }
